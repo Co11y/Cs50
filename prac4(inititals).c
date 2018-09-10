@@ -6,6 +6,8 @@ int main(void) {
 	char initials_up[3];
 	int int_initial = 0;
 	char char_initial;
+	char char_check;
+	int int_check = 0;
 	// getting string
 	string name = get_string("print your name here: "); \
 		// def string lenght for loop
@@ -18,6 +20,16 @@ int main(void) {
 		if (charc == ' ') {
 			initials[j] = name[i + 1];
 			j++;
+		}
+		for (int cnt_c = 0; cnt_c < 3; cnt_c++) {
+			char_check = initials[cnt_c];
+			int_check = (int)char_c;
+			if (char_c <= 90) {
+				break
+			}
+			else if ()
+
+
 		}
 	}
 	for (int cnt = 0; cnt < 3; cnt++) {
