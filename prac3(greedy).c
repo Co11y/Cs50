@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <math.h>
 int main(void) {
 	int total_coins = 0;
 	int used_coins = 0;
@@ -9,6 +10,8 @@ int main(void) {
 	{
 		fake_money = get_float("how many?:");
 	} while (fake_money < 0);
+	int money = round(fake_money * 100);
+=======
 	int money = fake_money * 100;
 	int coins[4] = { 25, 10, 5, 1 };
 	for (int i = 0; i < 4;) {
