@@ -1,43 +1,30 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <string.h>
+#include <cs50.h>
+// var ========================
+int j = 1;
+char initials[3];
+// upper func =================
+char upper(char initial) {
+	int temp;
+	char upinitial = initial;
+	temp = (int)initial;
+	if (temp > 96) {
+		upinitial = (char)temp - 32;
+	}
+	return upinitial;
+}
+// ==============================
 int main(void) {
-	char initials[3];
-	char initials_up[3];
-	int int_initial = 0;
-	char char_initial;
-	char char_check;
-	int int_check = 0;
-	// getting string
-	string name = get_string("print your name here: "); \
-		// def string lenght for loop
-		int lenght = strlen(name);
-	int j = 1;
-	// getting first initial
+	string name = get_string("write here your name!");
+	int name_lenght = strlen(name);
 	initials[0] = name[0];
-	for (int i = 0; i < lenght; i++) {
-		char charc = name[i];
-		if (charc == ' ') {
+	for (int i = 0; i < name_lenght; i++) {
+		if (name[i] == ' ') {
 			initials[j] = name[i + 1];
 			j++;
 		}
-		for (int cnt_c = 0; cnt_c < 3; cnt_c++) {
-			char_check = initials[cnt_c];
-			int_check = (int)char_c;
-			if (char_c <= 90) {
-				break
-			}
-			else if ()
-
-
-		}
 	}
-	for (int cnt = 0; cnt < 3; cnt++) {
-		int_initial = (int)initials[cnt];
-		int_initial = int_initial - 32;
-		char_initial = (char)int_initial;
-		initials_up[cnt] = char_initial;
-	}
-	printf("%c%c%c\n", initials[0], initials[1], initials[2]);
-	printf("%c%c%c\n", initials_up[0], initials_up[1], initials_up[2]);
+	printf("%c%c%c\n", upper(initials[0]), upper(initials[1]), upper(initials[2]));
+
 }
